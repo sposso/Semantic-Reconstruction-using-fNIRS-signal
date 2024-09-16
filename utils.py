@@ -161,8 +161,7 @@ def regression_experiment_data(dir_path,subject,sections,delay,wind_lenght,step_
     word_vec_dim (int): The dimension of the word embedding vectors.
 
     Returns:
-    chn =   stimulus responses along the 22 channels during 7 trials. 
-    chnavg = average stimulus responses along the 22 channels.
+    data =   stimulus responses along the 22 channels during 7 trials.
     stimuli_embedding = word embedding vectors of the stimuli.
     """
     
