@@ -17,7 +17,18 @@ In this experiment, a total of 7 healthy subjects participated. The audiovisual 
 ### Observation about the data :
 1. The fNIRS data only contains oxygenated hemoglobin (HbO) concentrations.
 2. The data provided is already preprocessed and involves the following steps: discontinuities and spike artifices are removed using nirsLab. Then, the signal is filtered by a band-pass between 0.01 and 0.1 Hz to remove physiological noise. Subsequently, the wavelength data is converted to oxygenated and deoxygenated hemoglobin concentration using the modified Beer-Lambert Law
-3. The dataset does not contain the original stimuli used in the experiments. 
+3. The dataset does not contain the original stimuli used in the experiments.
+
+
+## A bit of explanation of the repository's scripts
+
+
+1. **Deep_models.py** It contains the BiLSTM-based decoder used in the experiments. 
+2. **Utils.py** It contains several functions used in the paper. The most useful functions are:
+  - **Regression_experiment_data**. This function loads the fNIRS  data from the large-scale study and the word embedding vectors of the stimuli for a given subject.
+  + **Pilot_regression_experiment_data**. This function loads the fNIRS data from the pilot study and the word embedding vectors of the stimuli for a given subject.
+  * **Train_val** This function is used to train the BiLSTM-based decoder. It includes Earlystopping and Scheduler function. 
+   
 
 
 
