@@ -14,7 +14,7 @@ In this experiment, 8 participants viewed 8 objects from two semantic categories
 
 In this experiment, a total of 7 healthy subjects participated. The audiovisual stimuli were extended to 50 concepts from 10 semantic categories. This experiment is divided into two sections, with 25 objects presented in each section to avoid participant fatigue. Each stimulus is presented randomly 7 times during 3 seconds, followed by a 10-second rest period after each presentation. The fNIRS system utilized **22 channels** with a sampling rate of **7.8 Hz**. The focus is mainly on the brain's left hemisphere, which is known to have two cortical areas responsible for language processing: Broca's area and Wernicke's area.
 
-## Observation about the data :
+### Observation about the data :
 1. The fNIRS data only contains oxygenated hemoglobin (HbO) concentrations.
 2. The data provided is already preprocessed and involves the following steps: discontinuities and spike artifices are removed using nirsLab. Then, the signal is filtered by a band-pass between 0.01 and 0.1 Hz to remove physiological noise. Subsequently, the wavelength data is converted to oxygenated and deoxygenated hemoglobin concentration using the modified Beer-Lambert Law
 3. The dataset does not contain the original stimuli used in the experiments. 
