@@ -1,5 +1,5 @@
 # Semantic-Reconstruction-using-fNIRS-signal
-Semantic reconstruction of language from non-invasive brain recordings aims to decode the meaning of the words or sentences from neural activity patterns recorded using non-invasive neuroimaging techniques such as functional near-infrared spectroscopy (fNIRS). Previous studies have demonstrated that fNIRS contains information for language decoding. Unlike the classification approach that restricts the decoding capability of the models to a predefined set, we train our  model (referred to as "decoder")  to reconstruct the original vector representation of certain perceived concepts from the neural activity. In this study, we use Bidirectional Long Short-Term Memory (BiLSTM)-based decoder that learns to map from neural activation back to the stimuli domain. The decoding performance of the BiLSTM-based decoder is measured by computing the matching score between the generated output and the ground truth.
+Semantic reconstruction of language from non-invasive brain recordings aims to decode the meaning of the words or sentences from neural activity patterns recorded using non-invasive neuroimaging techniques such as functional near-infrared spectroscopy (fNIRS). Previous studies have demonstrated that fNIRS contains information for language decoding. Unlike the classification approach that restricts the decoding capability of the models to a predefined set, we train our  model (referred to as "decoder")  to reconstruct the original vector representation of certain perceived concepts from the neural activity. In this study, we use a Bidirectional Long Short-Term Memory (BiLSTM)-based decoder that learns to map from neural activation back to the stimuli domain. The decoding performance of the BiLSTM-based decoder is measured by computing the matching score between the generated output and the ground truth.
 
 ## fNIRS Data description: 
 
@@ -24,10 +24,13 @@ In this experiment, a total of 7 healthy subjects participated. The audiovisual 
 
 
 1. **Deep_models.py** It contains the BiLSTM-based decoder used in the experiments. 
-2. **Utils.py** It contains several functions used in the paper. The most useful functions are:
+2. **Utils.py** It contains key  functions  to run the experiments. The most useful ones are:
   - **Regression_experiment_data**. This function loads the fNIRS  data from the large-scale study and the word embedding vectors of the stimuli for a given subject.
   + **Pilot_regression_experiment_data**. This function loads the fNIRS data from the pilot study and the word embedding vectors of the stimuli for a given subject.
-  * **Train_val** This function is used to train the BiLSTM-based decoder. It includes Earlystopping and Scheduler function. 
+  * **Train_val** This function is used to train the BiLSTM-based decoder. It includes Earlystopping and Scheduler functions.
+3. **Pilot_main.py** This is the main file for training the BiLSTM-based decoder using the pilot data.  This small dataset was used for optimizing  the decoder's hyperparameters  like hidden size, number of layers, weight decay, learning rate, etc.
+4. **large_scale_main.py**. This script was used to test the Bi-LSTM model in the full-scale experiment, where both **between-category** and **within-category** experiments were conducted.
+5. **Leave_two_out_main_test.py**. In this script the Bi-LSTM model was tested in the full-scale experiment through the  **leave-two-out** experiment.
    
 
 
