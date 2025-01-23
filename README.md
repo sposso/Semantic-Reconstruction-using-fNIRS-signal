@@ -1,4 +1,9 @@
 # Semantic Reconstruction From fNIRS Using Recurrent Neural Networks
+
+This repository includes all codes to generate results in the following paper:
+Santiago Posso, Luis G Sanchez Giraldo, and Jihye Bae. "Semantic Reconstruction From fNIRS Using Recurrent Neural Networks" **2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)**.
+Please cite the above conference paper if you use any of the codes published in this repository, partially or entirely.
+
 Semantic reconstruction of language from non-invasive brain recordings aims to decode the meaning of the words or sentences from neural activity patterns recorded using non-invasive neuroimaging techniques such as functional near-infrared spectroscopy (fNIRS). Previous studies have demonstrated that fNIRS contains information for language decoding. Unlike the classification approach that restricts the decoding capability of the models to a predefined set, we train our  model (referred to as "decoder")  to reconstruct the original vector representation of perceived concepts from the neural activity. In this study, we examine four recurrent neural networks (RNNs)  to map from neural activation back to the stimuli domain: Elman recurrent neural network (ERNN), long short-term memory (LSTM), and  bidirectional version of them (BiERNN and BiLSTM). The decoding performance of the  decoder is measured by computing the matching score between the generated output and the ground truth.
 The RNN-based decoder framework is as follows:  ![RNN-based decoder framework](https://github.com/sposso/Semantic-Reconstruction-using-fNIRS-signal/blob/main/paper_figure.png)
 
