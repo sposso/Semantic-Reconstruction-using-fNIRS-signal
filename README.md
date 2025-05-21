@@ -2,15 +2,6 @@
 
 This repository includes all the code to generate results from the paper: [Semantic Reconstruction from fNIRS using Recurrent Neural Networks](https://ieeexplore.ieee.org/abstract/document/10981123)
 
-@inproceedings{posso2025semantic,
-  title={Semantic Reconstruction from Fnirs Using Recurrent Neural Networks},
-  author={Posso-Murillo, Santiago and Sanchez-Giraldo, Luis G and Bae, Jihye},
-  booktitle={2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)},
-  pages={1--5},
-  year={2025},
-  organization={IEEE}
-}
-
 Semantic reconstruction of language from non-invasive brain recordings aims to decode the meaning of the words or sentences from neural activity patterns recorded using non-invasive neuroimaging techniques such as functional near-infrared spectroscopy (fNIRS). Previous studies have demonstrated that fNIRS contains information for language decoding. Unlike the classification approach that restricts the decoding capability of the models to a predefined set, we train our  model (referred to as "decoder")  to reconstruct the original vector representation of perceived concepts from the neural activity. In this study, we examine four recurrent neural networks (RNNs)  to map from neural activation back to the stimuli domain: Elman recurrent neural network (ERNN), long short-term memory (LSTM), and  bidirectional version of them (BiERNN and BiLSTM). The decoding performance of the  decoder is measured by computing the matching score between the generated output and the ground truth.
 The RNN-based decoder framework is as follows:  ![RNN-based decoder framework](https://github.com/sposso/Semantic-Reconstruction-using-fNIRS-signal/blob/main/paper_figure.png)
 
@@ -45,6 +36,21 @@ In this experiment, a total of 7 healthy subjects participated. The audiovisual 
 3. **Pilot_main.py** This is the main file for training the BiLSTM-based decoder using the pilot data.  This small dataset was used for optimizing  the decoder's hyperparameters  like hidden size, number of layers, weight decay, learning rate, etc.
 4. **large_scale_main.py**. This script was used to test the Bi-LSTM model in the full-scale experiment, where both **between-category** and **within-category** experiments were conducted.
 5. **Leave_two_out_main_test.py**. In this script the Bi-LSTM model was tested in the full-scale experiment through the  **leave-two-out** experiment.
+
+
+## 📖 Citation
+
+```bibtex
+
+@inproceedings{posso2025semantic,
+  title={Semantic Reconstruction from Fnirs Using Recurrent Neural Networks},
+  author={Posso-Murillo, Santiago and Sanchez-Giraldo, Luis G and Bae, Jihye},
+  booktitle={2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--5},
+  year={2025},
+  organization={IEEE}
+}
+
    
 
 
