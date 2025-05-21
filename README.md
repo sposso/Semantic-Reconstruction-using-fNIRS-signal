@@ -50,16 +50,3 @@ In this experiment, a total of 7 healthy subjects participated. The audiovisual 
   year={2025},
   organization={IEEE}
 }
-
-   
-
-
-
-
-
-
-
-
-
-
-
